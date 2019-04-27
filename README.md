@@ -11,12 +11,20 @@ An app that utilizes your Talon Card and offers a wallet that is easily accessib
 
 
  IS3020 Final Project
+
+
  Application Development
+
+
  Professor: Dominic Thomas
+
+
  University: Kennesaw State
- Coders: Emily Onofrey and Sydnee Gage
+
+
+ *Coders: Emily Onofrey and Sydnee Gage*
  
- 
+
  - Some code borrowed from @ani10030 on GitHub
  - Disclaimer: This will be a prototype that we will use in order to make tranferring swipes easier. By doing this,it will encourage student involvement and engagement on campus. In no way are we trying to "sell swipes." Our idea is simply to encourage students to enhance their educational experience by utilizing KSU's facilities. 
 -In the future we plan to expand our database from SQLite to MySQL
