@@ -12,6 +12,18 @@ j={'Sydnee':'JJJ','A/C':790141,'Bal':190}
 
 final={173401:a,123456:b,899764:c,987653:d,129867:e,778354:f,111111:g,876309:h,585065:i,790141:j}
 
+
+#pulling from db here
+import sqlite3
+conn=sqlite3.connect('ksustudents.db')
+cur=conn.cursor()
+cur.execute("SELECT * FROM KSU Students")
+varID=cur.fetchall()
+cur.execute("SELECT * FROM Student names")
+varNames=cur.fetchall()
+conn.close()	
+
+
 x=True
 y=True
 z=False
