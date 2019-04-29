@@ -1,26 +1,26 @@
 # code from @ani10030 on GitHub
-a={'Name':'AAA','A/C':10,'Bal':100}
-b={'Name':'BBB','A/C':11,'Bal':110}
-c={'Name':'CCC','A/C':12,'Bal':120}
-d={'Name':'DDD','A/C':13,'Bal':130}
-e={'Name':'EEE','A/C':14,'Bal':140}
-f={'Name':'FFF','A/C':15,'Bal':150}
-g={'Name':'GGG','A/C':16,'Bal':160}
-h={'Name':'HHH','A/C':17,'Bal':170}
-i={'Name':'III','A/C':18,'Bal':180}
-j={'Name':'JJJ','A/C':19,'Bal':190}
+a={'Bethany':'AAA','A/C':173401,'Bal':100}
+b={'Tatum':'BBB','A/C':123456,'Bal':110}
+c={'Kaylee':'CCC','A/C':899764,'Bal':120}
+d={'Olivia':'DDD','A/C':987653,'Bal':130}
+e={'Christian':'EEE','A/C':129867,'Bal':140}
+f={'Garrett':'FFF','A/C':778354,'Bal':150}
+g={'Carly':'GGG','A/C':111111,'Bal':160}
+h={'David':'HHH','A/C':876309,'Bal':170}
+i={'Emily':'III','A/C':585065,'Bal':180}
+j={'Sydnee':'JJJ','A/C':790141,'Bal':190}
 
-final={10:a,11:b,12:c,13:d,14:e,15:f,16:g,17:h,18:i,19:j}
+final={173401:a,123456:b,899764:c,987653:d,129867:e,778354:f,111111:g,876309:h,585065:i,790141:j}
 
 x=True
 y=True
 z=False
-print ('USERNAMES EXIST ONLY FROM 10-19')
+print ('MUST BE A CURRENT STUDENT')
 print ('')
 while x==True:
 	try:
-		usr=int (input("Enter your Username : "))
-		pin=int (input("Enter your PIN : "))
+		usr=int (input("Enter your KSU ID : "))
+		pin=int (input("Enter your PIN: "))
 		usr_no=int (final[usr]['A/C'])
 		if (usr==usr_no & usr==pin):
 			print("""
@@ -28,6 +28,7 @@ while x==True:
 			y=True
 			while y==True:
 				print("""
+		Hello KSU Owl! What would you like to do:		
 		1. My Balance
 		2. Make a Transfer
 		3. Logout
@@ -70,7 +71,7 @@ while x==True:
 						break
 					elif(login_option==4):
 						print("""
-		Thank you and Good-Bye :)""")
+		Thank you and Hooty Hoo ;)""")
 						y=z
 						x=z
 				except:
