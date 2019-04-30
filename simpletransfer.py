@@ -1,3 +1,6 @@
+
+import sqlite3
+
 # code from @ani10030 on GitHub
 a={'Bethany':'AAA','A/C':173401,'Bal':100}
 b={'Tatum':'BBB','A/C':123456,'Bal':110}
@@ -15,7 +18,7 @@ final={173401:a,123456:b,899764:c,987653:d,129867:e,778354:f,111111:g,876309:h,5
 
 #pulling from db here
 #setting up variables
-import sqlite3
+
 conn=sqlite3.connect("ksustudents.db")
 cur=conn.cursor()
 cur.execute("SELECT * FROM Student ID")   #need to reformat table in sqlite maybe, getting error here
