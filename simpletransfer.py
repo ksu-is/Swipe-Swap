@@ -18,18 +18,27 @@ final={173401:a,123456:b,899764:c,987653:d,129867:e,778354:f,111111:g,876309:h,5
 
 #pulling from db here
 #setting up variables
+def getstudents():
+	conn=sqlite3.connect("ksustudents.db")
+	conn.row_factory = sqlite3.Row
+	cur=conn.cursor()
+	cur.execute("SELECT * FROM students")   #need to reformat table in sqlite maybe, getting error here
+	#varStudents=cur.fetchall()
+	varStudents = [dict(row) for row in cur.fetchall()]
+	conn.close()
+	return varStudents	
+students = getstudents()
 
-conn=sqlite3.connect("ksustudents.db")
-cur=conn.cursor()
-cur.execute("SELECT * FROM Student ID")   #need to reformat table in sqlite maybe, getting error here
-varID=cur.fetchall()
-cur.execute("SELECT * FROM Student names")
-varNames=cur.fetchall()
-cur.execute("SELECT * FROM Available Swipes")
-varSwipes=cur.fetchall()
-cur.execute("SELECT * FROM Contact List")
-varCL=cur.fetchall()
-conn.close()	
+#print("Students[1] =",students[1])
+
+def findName(name):
+	for s in students:
+		if s['name'].strip() == name:
+			return s['ID']
+	return "Not found."
+
+testName = input("Give a name of someone to find: ")
+print(findName(testName))
 
 
 x=True
