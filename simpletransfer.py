@@ -17,10 +17,10 @@ final={173401:a,123456:b,899764:c,987653:d,129867:e,778354:f,111111:g,876309:h,5
 import sqlite3
 conn=sqlite3.connect('ksustudents.db')
 cur=conn.cursor()
-#cur.execute("SELECT * FROM KSU Students")   #need to reformat table, getting error here
-#varID=cur.fetchall()
-#cur.execute("SELECT * FROM Student names")
-#varNames=cur.fetchall()
+cur.execute("SELECT * FROM KSUStudents")   #need to reformat table, getting error here
+varID=cur.fetchall()
+cur.execute("SELECT * FROM Student names")
+varNames=cur.fetchall()
 conn.close()	
 
 
