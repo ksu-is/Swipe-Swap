@@ -1,6 +1,6 @@
 
 import sqlite3
-
+'''
 # code from @ani10030 on GitHub
 a={'Bethany':'AAA','A/C':173401,'Bal':100}
 b={'Tatum':'BBB','A/C':123456,'Bal':110}
@@ -14,7 +14,7 @@ i={'Emily':'III','A/C':585065,'Bal':180}
 j={'Sydnee':'JJJ','A/C':790141,'Bal':190}
 
 final={173401:a,123456:b,899764:c,987653:d,129867:e,778354:f,111111:g,876309:h,585065:i,790141:j}
-
+'''
 
 #pulling from db here
 #setting up variables
@@ -37,23 +37,32 @@ def findName(name):
 			return s['ID']
 	return "Not found."
 
-testName = input("Give a name of someone to find: ")
-print(findName(testName))
+def findID(ID):
+	for s in students:
+		if s['ID'] == int(ID):
+			return s
+	return "Not found."
+#print("Carly = ",findID(111111))
 
+#testName = input("Give a name of someone to find: ")
+#print(findName(testName))
+print(students)
 
 x=True
-y=True
 z=False
 print ('MUST BE A CURRENT STUDENT')
 print ('')
 while x==True:
 	try:
-		usr=int (input("Enter your KSU ID : "))
-		pin=int (input("Enter your PIN: "))
-		usr_no=int (final[usr]['A/C'])
-		if (usr==usr_no & usr==pin):
-			print("""
-		Login Successful!""")
+		usrID = input("Enter your KSU ID: ")
+		#print("ID received: >" + usrID + "<")
+		student = findID(usrID)
+		#print("Student is:",student)
+		#pin=int (input("Enter your PIN: "))
+		#usr_no=int (final[usr]['A/C'])
+		if student != "Not found.":
+			print("Login Successful, " + student["name"] + "!")
+		
 			y=True
 			while y==True:
 				print("""
@@ -63,6 +72,7 @@ while x==True:
 		3. Logout
 		4. Logout and Exit
 		""")
+		
 				try:
 					login_option=int(input("Input one of the above options to proceed : "))
 					if(login_option==1):
@@ -77,7 +87,7 @@ while x==True:
 								print("""
 		Invalid Username!""")
 								continue
-							if(transfer>int(final[usr]['Bal'])):
+							if(transfer>int(student['swipes'])):
 								print("""
 		Not Enough Funds!
 		Please try again...""")
@@ -111,6 +121,6 @@ while x==True:
 			print("""
 		Username and Password don't match!
 			Please Try Again""")
+		
 	except:
-		print("""
-		x.Invalid Input! Please Try Again""")
+		print("Invalid ID! Please Try Again.")
