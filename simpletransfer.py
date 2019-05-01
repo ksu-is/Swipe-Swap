@@ -60,13 +60,13 @@ while x==True:
 					login_option=int(input("Input one of the above options to proceed : "))
 					if(login_option==1):
 						print("""
-		Current Available Balance : %d""" (student[usrID]['Bal']))
+		Current Available Balance : %d""" .format(student[usrID]['Bal']))
 
 					elif(login_option==2):
 						while y==True:
 							transfer=int (input("Enter the amount of swipes to transfer : "))
-							transfer_to=int (input("Enter the Username to whom amount has to be transferred : "))
-							if(transfer_to not in students):
+							transfer_to=int (input("Enter the Student ID to whom amount has to be transferred : "))
+							if(transfer_to not in student[usrID]):
 								print("""
 		Invalid Username!""")
 								continue
@@ -82,9 +82,9 @@ while x==True:
 								students[usr]['Bal']=hello
 								students[transfer_to]['Bal']=hello2
 								print("""
-		TRANSACTION SUCCESSFUL!
-		Your Available Swipes : %d""" (students[student]['Bal'])
-						break
+										TRANSACTION SUCCESSFUL!
+										Your Available Swipes : %d""".format(students[student]['Bal']))
+								break
 					elif(login_option==3):
 						print("""
 		Successfully Logged out!
