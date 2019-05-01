@@ -1,4 +1,20 @@
+
 import sqlite3
+'''
+# code from @ani10030 on GitHub
+a={'Bethany':'AAA','A/C':173401,'Bal':100}
+b={'Tatum':'BBB','A/C':123456,'Bal':110}
+c={'Kaylee':'CCC','A/C':899764,'Bal':120}
+d={'Olivia':'DDD','A/C':987653,'Bal':130}
+e={'Christian':'EEE','A/C':129867,'Bal':140}
+f={'Garrett':'FFF','A/C':778354,'Bal':150}
+g={'Carly':'GGG','A/C':111111,'Bal':160}
+h={'David':'HHH','A/C':876309,'Bal':170}
+i={'Emily':'III','A/C':585065,'Bal':180}
+j={'Sydnee':'JJJ','A/C':790141,'Bal':190}
+
+final={173401:a,123456:b,899764:c,987653:d,129867:e,778354:f,111111:g,876309:h,585065:i,790141:j}
+'''
 
 #pulling from db here
 #setting up variables
@@ -63,13 +79,17 @@ while x==True:
 					login_option=int(input("Input one of the above options to proceed : "))
 					if(login_option==1):
 						print("""
+<<<<<<< HEAD
 		Current Available Balance : %d""" (student[ID]['Bal']))
+=======
+		Current Available Balance : %d""" %(final[usr]['Bal']))
+>>>>>>> parent of 97a4e42... Update simpletransfer.py
 
 					elif(login_option==2):
 						while y==True:
 							transfer=int (input("Enter the amount of swipes to transfer : "))
 							transfer_to=int (input("Enter the Username to whom amount has to be transferred : "))
-							if(transfer_to not in students):
+							if(transfer_to not in final):
 								print("""
 		Invalid Username!""")
 								continue
@@ -80,13 +100,17 @@ while x==True:
 								continue
 							else:
 
-								hello=student[usr]['Bal']-transfer
-								hello2=student[transfer_to]['Bal']+transfer
-								students[usr]['Bal']=hello
-								students[transfer_to]['Bal']=hello2
+								hello=final[usr]['Bal']-transfer
+								hello2=final[transfer_to]['Bal']+transfer
+								final[usr]['Bal']=hello
+								final[transfer_to]['Bal']=hello2
 								print("""
 		TRANSACTION SUCCESSFUL!
+<<<<<<< HEAD
 		Your Available Swipes : %d""" (students[usr]['Bal'])
+=======
+		Your Available Swipes : %d""" %final[usr]['Bal'])
+>>>>>>> parent of 97a4e42... Update simpletransfer.py
 								break
 					elif(login_option==3):
 						print("""
