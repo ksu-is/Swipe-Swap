@@ -80,7 +80,11 @@ while x==True:
 					if(login_option==1):
 						print("""
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Current Available Balance : %d""" (student[ID]['Bal']))
+=======
+		Current Available Balance : %d""" %(final[usr]['Bal']))
+>>>>>>> parent of 97a4e42... Update simpletransfer.py
 =======
 		Current Available Balance : %d""" %(final[usr]['Bal']))
 >>>>>>> parent of 97a4e42... Update simpletransfer.py
@@ -107,7 +111,11 @@ while x==True:
 								print("""
 		TRANSACTION SUCCESSFUL!
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Your Available Swipes : %d""" (students[usr]['Bal'])
+=======
+		Your Available Swipes : %d""" %final[usr]['Bal'])
+>>>>>>> parent of 97a4e42... Update simpletransfer.py
 =======
 		Your Available Swipes : %d""" %final[usr]['Bal'])
 >>>>>>> parent of 97a4e42... Update simpletransfer.py
