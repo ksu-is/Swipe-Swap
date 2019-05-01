@@ -28,6 +28,8 @@ def findID(ID):
 	return "Not found."
 #print("Carly = ",findID(111111))
 
+def 
+
 #testName = input("Give a name of someone to find: ")
 #print(findName(testName))
 print(students)
@@ -61,7 +63,7 @@ while x==True:
 					login_option=int(input("Input one of the above options to proceed : "))
 					if(login_option==1):
 						print("""
-		Current Available Balance : %d""" %(student[usr]['Bal']))
+		Current Available Balance : %d""" (student[ID]['Bal']))
 
 					elif(login_option==2):
 						while y==True:
@@ -84,7 +86,7 @@ while x==True:
 								students[transfer_to]['Bal']=hello2
 								print("""
 		TRANSACTION SUCCESSFUL!
-		Your Available Swipes : %d""" %students[usr]['Bal'])
+		Your Available Swipes : %d""" (students[usr]['Bal'])
 								break
 					elif(login_option==3):
 						print("""
